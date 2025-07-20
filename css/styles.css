@@ -5,11 +5,12 @@ body, html {
     
  
 }
-main {
-    background:linear-gradient(to buttom, #d0ff44, #8cd105);
+main, .principal {
+    background:linear-gradient(to bottom, #d0ff44, #8cd105);
     color: #333;
     padding: 60px 20;
     text-align: center;
+    box-sizing: border-box;
     
 }
 /* Imagenes redondas */
@@ -134,4 +135,71 @@ footer {
     padding: 25px;
     font-size: 20px;
     text-align: center;
+}
+/* Contacto */
+form {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+input, textarea, button {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid #0046a6;
+    font-size: 18px;
+}
+
+button {
+    background-color: #0046a6;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003080;
+}
+
+/* Contenedor blog centrado */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* ✅ Esto lo centra */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Tarjeta blog */
+.blog-box {
+    background: white;
+    width: 320px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.blog-box:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen redonda */
+.blog-box img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
 }

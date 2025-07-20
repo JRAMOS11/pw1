@@ -1,24 +1,40 @@
-
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("Sitio de Fotocopias y Más cargado correctamente ");
+    console.log("Sitio de Fotocopias y Más cargado correctamente");
+
     
-    // Alerta solo en la página de inicio
     if (document.title.includes("Inicio")) {
         alert("¡Bienvenido a Fotocopias y Más!");
     }
 
-    // Validación sencilla de formulario de contacto (si existe)
-    const contactoForm = document.getElementById("formContacto");
+    
+    const contactoForm = document.getElementById("formulario-contacto");
     if (contactoForm) {
         contactoForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
             const nombre = document.getElementById("nombre").value.trim();
+            const correo = document.getElementById("correo").value.trim();
             const mensaje = document.getElementById("mensaje").value.trim();
-            if (nombre === "" || mensaje === "") {
-                alert("Por favor, completa todos los campos del formulario.");
-                event.preventDefault();
-            } else {
-                alert("¡Gracias por contactarnos!");
+
+            const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (nombre.length < 3) {
+                alert("⚠️ El nombre debe tener al menos 3 caracteres.");
+                return;
             }
+
+            if (!correoRegex.test(correo)) {
+                alert("⚠️ Ingresa un correo válido.");
+                return;
+            }
+
+            if (mensaje.length < 5) {
+                alert("⚠️ El mensaje debe ser más largo.");
+                return;
+            }
+
+            alert(" ¡Gracias por contactarnos!");
+            contactoForm.reset();
         });
     }
 });
