@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('forms.css');
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding:0px;
+    margin:0px;
+    font-family: "Roboto", Arial, sans-serif;
+}
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a47864;
+    color:#222;
+}
+
+header section{
+    display:flex;
+    flex:1;
+    align-items: center;
+    gap:1rem;
+}
+
+header section h1 {
+    margin:0px;
+    font-size:1rem;
+}
+
+header section img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+header nav ul{
+    padding:0px;
+    margin:0px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a{
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    color: #222;
+    text-decoration: none;
+    background-color:#a47864;
+    transition: background-color 1s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #d29b81;
+}
+main {
+    flex:1;
+}
+
+
+.hero-panel {
+    position:relative;
+}
+
+.hero-panel img{
+    width:100%;
+    height:80vh; /*Viewport Height*/
+    object-fit: cover;
+}
+
+.hero-panel .hero-action {
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 9px;
+    color:#333;
+    position:absolute;
+    width: 380px;
+    padding:1rem;
+    font-size: 1.5rem;
+    transform: translate(-50%, -50%);
+    text-align:center;
+}
+
+.hero-action button {
+    background-color: #3c51ba;
+    color:#fff;
+    font-weight: bold;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size:1.6rem;
+    border-radius: 1.75rem;
+    box-shadow: 3px 3px 5px #000;
+}
+
+.hero-action.center {
+    top: 50%;
+    left: 50%;
+}
+
+.hero-action.q1 {
+    top: 25%;
+    left: 25%;
+}
+
+.hero-action.q2 {
+    top: 25%;
+    left: 75%;
+}
+
+/*Modelo de Cajas*/
+/*
+
+2 tipo de renderizados: bloque (block), fluido (inline)
+
+content - no se aplican estilos de dimensiones
+padding - TRBL  Top, Right, Botton, Left
+border -
+margin -
+
+width: 100%  sumar contenido, padding y border
+box-sizing: border-box
+
+*/
+.card-holder {
+    display: flex; /*Aplica renderizado para layouts*/
+    padding:1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card-holder .card{
+    display:block;
+    background-color:#a47864;
+    width:320px;
+    border: 1px #000 solid;
+    border-radius: 5px;
+}
+
+.card .card-header{
+    box-shadow: 0px 3px 3px #000;
+    position: relative;
+}
+.card .card-header img {
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card .card-header .card-header-label{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    padding: 1rem 0.75rem;
+    background-color:rgba(255,255,255,0.7);
+    width:100%;
+    font-weight: bold;
+}
+.card .card-body {
+    padding: 1rem;
+}
+.card .card-footer {
+    padding:0.5rem 1rem;
+}
+.card .card-footer.right {
+    text-align: right;
+}
+.card .card-footer button{
+    padding:0.8rem 1rem;
+    border: 1px solid #3c51ba;
+    background-color: #485cc0;
+    color:#fff;
+    border-radius: 9px;
+    box-shadow: 1px 1px 3px #000;
+}
+
+
+footer {
+    background-color: #a47864;
+    color:#222;
+}
+
+.full-image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.center-content{
+    display:flex;
+    padding:1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.flex {
+    display:flex;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+@media (min-width:681px){
+    .container-md {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
+
+
+aside.full-modal {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.full-modal section .loader {
+    border: 4px dotted #a47864;
+    border-top: 4px solid #a47864;
+    width: 64px;
+    height: 64px;
+    border-radius:50%;
+    animation: rotateLoader 3.7s infinite;
+}
+
+
+@keyframes rotateLoader {
+    0% {
+        transform: rotate(0deg);
+        border-top: 4px solid #a47864;
+    }
+    25%{
+        transform: rotate(90deg);
+        border-top: 5px solid #176341;
+    }
+    50%{
+        transform: rotate(180deg);
+        border-top: 6px solid #a47864;
+    }
+    75%{
+        transform: rotate(270deg);
+        border-top: 5px solid #64a487;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-top: 4px solid #a47864;
+    }
+}
