@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cotizar - Fotocopias y Más</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header style="text-align: center;">
+    <div class="header-container">
+      <img src="imgweb/logo1ft.png" alt="Logo Fotocopias y Más">
+      <h1 class="logo">Fotocopias y Más</h1>
+      <nav style="margin-top: 20px;">
+        <a href="index.html">Inicio</a>
+        <a href="acerca.html">Acerca de</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="blog.html">Blog</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="contacto.html">Contáctanos</a>
+        <a href="cotizar.html" class="activo">Cotizar</a>
+        <a href="faq.html">FAQ</a>
+        <a href="promociones.html">Promos</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="principal">
+    <h2>Solicita tu Cotización</h2>
+    <p class="subtexto">Rellena el formulario y te enviaremos una cotización personalizada.</p>
+
+    <!-- ID agregado aquí -->
+    <form id="formulario-cotizar" action="#" method="post">
+      <label for="nombre">Nombre completo:</label><br>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Martínez" required><br>
+
+      <label for="correo">Correo electrónico:</label><br>
+      <input type="email" id="correo" name="correo" placeholder="Ej. ana@email.com" required><br>
+
+      <label for="telefono">Teléfono:</label><br>
+      <input type="tel" id="telefono" name="telefono" placeholder="Ej. 9876-5432" required><br>
+
+      <label for="servicio">Servicio requerido:</label><br>
+      <select id="servicio" name="servicio" required>
+        <option value="">Selecciona un servicio</option>
+        <option value="fotocopias">Fotocopias</option>
+        <option value="impresiones">Impresiones</option>
+        <option value="arreglos">Arreglos Personalizados</option>
+        <option value="secretariales">Servicios Secretariales</option>
+        <option value="otros">Otros</option>
+      </select><br>
+
+      <label for="detalles">Detalles adicionales:</label><br>
+      <textarea id="detalles" name="detalles" rows="4" placeholder="Especifica lo que necesitas..."></textarea><br>
+
+      <button type="submit">Enviar Cotización</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>©️ 2020-2025 Fotocopias y Más | Colonia Buenos Aires 1 | WhatsApp: 32467217</p>
+    <script src="js/main.js"></script>
+  </footer>
+</body>
+</html>
